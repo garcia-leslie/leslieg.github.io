@@ -1,0 +1,58 @@
+<! DOCTYPE  html>
+<html>
+<link rel="stylesheet" href="stylesheet.css">
+  <head>
+<h1> Welcome, I'm Leslie Garcia! </h1>
+  </head>
+
+  <body>
+
+  <button class="tablink" onclick="openPage('Home', this, 'coral')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('About', this, 'coral')">About</button>
+
+  <div id="Home" class="tabcontent">
+    <h3>All About Me</h3>
+    <p>Full Name: Leslie Garcia</p>
+    <p>Birthday: December 18, 2000</p>
+    <p>Zodiac Sign: Sagittarius</p>
+    <p>Born: Dallas, Texas</p>
+    <p>Family: I live with both of my parents, my older brother, and two sisters.</p>
+    <p>Grade level: I am currently a senior at Garza ECHS.</p>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <h3>Interests</h3>
+    <p>I love going to concerts because it makes me feel happy.</p>
+    <p>My favorite artists are One Direction, Shawn Mendes, and Fifth Harmony.</p>
+    <h3>Fun Facts:</h3>
+    <p>I have meet <em>Louis Tomlinson</em> from One Direction.</p>
+    <p><img src="https://i.iheart.com/v3/re/new_assets/599490a9d6aea1d7b0700ccb?ops=maxcontain(750,473),quality(80)"></p>
+
+  <image
+    alt="It's me meeting Louis Tomlinson from One Direction"
+    scr="https://i.iheart.com/v3/re/new_assets/599490a9d6aea1d7b0700ccb?ops=maxcontain(750,473),quality(80)"/>
+    <h3>Favorite Websites:</h3>
+    My favorite website is <a href="https://twitter.com/?lang=en">Twitter! </a>
+  </div>
+
+  <script>
+  function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+
+  </body>
+  </html>
